@@ -107,6 +107,79 @@
     <footer>
         <p>© 2026 Kama App Store. Created with ❤️ by Meghakrishna & Friend.</p>
     </footer>
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
 
+<script>
+  // Firebase Configuration (Tumhara Config)
+  const firebaseConfig = {
+    apiKey: "AIzaSyB5stQ4Ueav_qXL6qQ1AaxF72AfSwpyD1c",
+    authDomain: "kama-app-store.firebaseapp.com",
+    projectId: "kama-app-store",
+    storageBucket: "kama-app-store.firebasestorage.app",
+    messagingSenderId: "1063078861614",
+    appId: "1:1063078861614:web:dda1e14bd3253284b938bf"
+  };
+
+  // Firebase Initialize
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+
+  // 1. Review Submit karne ka Handler
+  const form = document.getElementById('feedbackForm');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const rating = document.getElementById('userRating').value;
+      const comment = document.getElementById('userComment').value;
+
+      db.collection("kamacam_reviews").add({
+        rating: parseInt(rating),
+        comment: comment,
+        timestamp: new Date()
+      })
+      .then(() => {
+        alert("Shukriya dost! Tumhara review save ho gaya!");
+        form.reset();
+      })
+      .catch((error) => {
+        console.error("Review save karne me error aaya: ", error);
+        alert("Oops! Review save nahi ho paya. Dobara try karo.");
+      });
+    });
+  }
+
+  // 2. Real-time Reviews Fetch karke Display karna
+  db.collection("kamacam_reviews").orderBy("timestamp", "desc").onSnapshot((snapshot) => {
+    let reviewsHTML = '<h3 style="margin-top: 20px; color: #00E676;">User Reviews</h3>';
+    
+    if (snapshot.empty) {
+      reviewsHTML += '<p style="color: #A0A0A0; font-size: 0.9rem;">Abhi tak koi review nahi aaya hai. Pehle reviewer bano!</p>';
+    } else {
+      snapshot.forEach((doc) => {
+        const data = doc.data();
+        const stars = "⭐".repeat(data.rating || 5);
+        reviewsHTML += `
+          <div style="background: #2D2D2D; padding: 12px; margin-top: 10px; border-radius: 8px; border-left: 4px solid #00E676;">
+            <div style="font-size: 1.1rem; margin-bottom: 4px;">${stars}</div>
+            <p style="margin: 0; color: #E0E0E0; font-size: 0.95rem;">${data.comment}</p>
+          </div>
+        `;
+      });
+    }
+
+    let reviewBox = document.getElementById('displayReviews');
+    if (!reviewBox) {
+      reviewBox = document.createElement('div');
+      reviewBox.id = 'displayReviews';
+      const feedbackCard = document.querySelector('.feedback-card');
+      if (feedbackCard) {
+        feedbackCard.appendChild(reviewBox);
+      }
+    }
+    reviewBox.innerHTML = reviewsHTML;
+  });
+</script>
 </body>
 </html>
