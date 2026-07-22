@@ -1,0 +1,375 @@
+/* Premium Dark Theme Core Setup */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #E0E0E0;
+}
+
+header {
+    background: linear-gradient(135deg, #1F1C2C, #928DAB);
+    text-align: center;
+    padding: 30px 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.store-brand {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+}
+
+.tagline {
+    color: #D1C4E9;
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.store-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 10px;
+}
+
+/* App Listing Card Styling */
+.app-card {
+    background-color: #1E1E1E;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    border: 1px solid #2C2C2C;
+}
+
+.app-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.app-icon {
+    font-size: 3.5rem;
+    background-color: #2D2D2D;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+}
+
+.app-details h2 {
+    margin: 0;
+    color: #FFFFFF;
+    font-size: 1.6rem;
+}
+
+.developer {
+    margin: 4px 0;
+    color: #BB86FC;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.rating-text {
+    font-size: 0.85rem;
+    color: #A0A0A0;
+    margin-left: 5px;
+}
+
+.app-description {
+    color: #B0B0B0;
+    line-height: 1.6;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+
+/* Premium Download Button */
+.download-btn {
+    display: block;
+    text-align: center;
+    background: linear-gradient(90deg, #673AB7, #3F51B5);
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(103, 58, 183, 0.4);
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: #333;
+    margin: 30px 0;
+}
+
+/* Feedback Form Styles */
+.feedback-section h3 {
+    color: #FFFFFF;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.rating-input {
+    margin-bottom: 15px;
+}
+
+.rating-input select {
+    background-color: #2D2D2D;
+    color: white;
+    border: 1px solid #444;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+textarea {
+    width: 100%;
+    height: 80px;
+    background-color: #2D2D2D;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 12px;
+    box-sizing: border-box;
+    resize: none;
+    font-family: inherit;
+    margin-bottom: 15px;
+}
+
+textarea:focus {
+    border-color: #BB86FC;
+    outline: none;
+}
+
+.submit-btn {
+    background-color: #03DAC6;
+    color: #000000;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #018786;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 40px;
+}
+/* Extra Premium Styles for Details & List Page */
+.section-title {
+    color: #BB86FC;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.app-list-card {
+    background-color: #1E1E1E;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #2C2C2C;
+}
+
+.app-main-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.app-info-block h3 {
+    margin: 0;
+    color: #FFFFFF;
+}
+
+.app-mini-desc {
+    color: #A0A0A0;
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+
+.view-details-btn {
+    display: block;
+    text-align: center;
+    background-color: #2D2D2D;
+    color: #BB86FC;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 15px;
+    font-weight: bold;
+    border: 1px solid #BB86FC;
+    transition: background 0.2s;
+}
+
+.view-details-btn:hover {
+    background-color: #BB86FC;
+    color: #000000;
+}
+
+/* Details Page Specifics */
+.app-detail-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.app-main-info h1 {
+    margin: 0;
+    color: #FFFFFF;
+}
+
+.app-tag {
+    color: #A0A0A0;
+    margin: 5px 0 0 0;
+    font-style: italic;
+}
+
+.action-card {
+    background: #252525;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.text-center { text-align: center; }
+.download-sub { font-size: 0.8rem; color: #777; margin-top: 8px; }
+
+.detail-section {
+    background-color: #1E1E1E;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    border: 1px solid #2C2C2C;
+}
+
+.feature-list {
+    padding-left: 20px;
+    color: #B0B0B0;
+}
+
+.feature-list li { margin-bottom: 10px; }
+
+/* Screenshot Grid Setup */
+.screenshot-gallery {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.screen-card {
+    background: #2D2D2D;
+    padding: 8px;
+    border-radius: 8px;
+    min-width: 160px;
+    text-align: center;
+}
+
+.screen-card img {
+    width: 100%;
+    border-radius: 6px;
+    height: auto;
+}
+
+.screen-caption {
+    font-size: 0.75rem;
+    color: #A0A0A0;
+    margin: 5px 0 0 0;
+}
+
+/* Voice Commands Styling */
+.voice-box {
+    background: linear-gradient(145deg, #1E1E1E, #251B35);
+    border-color: #673AB7;
+}
+
+.command-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.command-item {
+    background: rgba(255,255,255,0.05);
+    padding: 12px;
+    border-radius: 8px;
+    border-left: 4px solid #03DAC6;
+}
+
+.cmd-trigger {
+    display: block;
+    color: #03DAC6;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 1.05rem;
+}
+
+.cmd-desc {
+    color: #B0B0B0;
+    font-size: 0.88rem;
+    margin-top: 4px;
+    display: block;
+}
+
+.rating-display-big {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.big-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.total-reviews { margin: 2px 0 0 0; font-size: 0.8rem; color: #777; }
+
+.locked { opacity: 0.5; position: relative; }
+.status-tag {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #444;
+    color: #FFF;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+/* Asli Icon ko perfect size me fit karne ke liye */
+.app-icon-container {
+    width: 75px;      /* Fix width */
+    height: 75px;     /* Fix height */
+    flex-shrink: 0;   /* Image ko dabne se rokega */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.store-app-logo {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px; /* Play store jaisa smooth round corner */
+    object-fit: cover;   /* Image ko stretch hone se bachayega */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
